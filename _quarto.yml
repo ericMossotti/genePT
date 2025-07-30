@@ -1,5 +1,7 @@
 project:
   type: book
+  execute-dir: file
+  output-dir: book-output
 
 book:
   title: "genePT"
@@ -10,12 +12,24 @@ book:
     - intro.qmd
     - summary.qmd
     - references.qmd
+    - part: "Part I: Introduction"
+      chapters:
+        - chapter1/chapter1.qmd
+    - part: "Part II: Advanced Topics"
+      chapters:
+        - chapter2/chapter2.qmd
+    - part: "Part III: Applications"
+      chapters:
+        - chapter3/chapter3.qmd
+  
 
 bibliography: references.bib
 
 format:
   html:
-    theme: cosmo
+    theme:
+      light: lightly
+      dark: darkly
   pdf:
     documentclass: scrreprt
 
